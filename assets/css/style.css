@@ -1,0 +1,305 @@
+body {
+  background-image: url(/assets/img/esteban-lopez-6yjAC0-OwkA-unsplash.jpg);
+  background-size: cover;
+  background-repeat: repeat repeat;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#logo {
+  width: 40vw;
+  height: 43vh;
+  position: absolute;
+  left: 29vw;
+  top: -5vh;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+  font-size: 4em;
+  margin: 0;
+  color: #777585;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3,
+h4 {
+  font-size: 1.5em;
+}
+
+h2,
+h3,
+h4 {
+  color: #262f35af;
+  margin: 0;
+  text-align: center;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-shadow: 2px 2px 2px #daa378;
+}
+a {
+  position: absolute;
+  left: 57vw;
+  top: 16vh;
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1;
+  cursor: pointer;
+}
+
+a:after {
+  content: "View all Heroes";
+  align-self: center;
+  line-height: 8vw;
+}
+#more {
+  position: absolute;
+  top: 115vh;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  width: 98vw;
+  background-color: rgba(0, 0, 0, 0.685);
+  border-radius: 30px;
+}
+
+#appearance,
+#work,
+#connections {
+  margin-left: 100px;
+}
+#showMore {
+  position: absolute;
+  top: 56vh;
+  margin-left: 10px;
+}
+h5 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.9vw;
+  width: 10vw;
+  margin: auto;
+  margin-top: 20px;
+}
+h6 {
+  font-size: 1vw;
+}
+input {
+  position: absolute;
+  left: 36vw;
+  top: 22vh;
+  background: none;
+  border-radius: 20px;
+  border: 1px dashed black;
+  width: 14vw;
+  height: 4vh;
+  text-transform: capitalize;
+  text-align: center;
+  color: #262f35af;
+  text-shadow: 2px 2px 2px #daa378;
+  font-weight: bolder;
+  font-size: 1.5vw;
+}
+input:focus {
+  outline: none;
+}
+button:focus {
+  outline: none;
+}
+button {
+  position: absolute;
+  left: 34vw;
+  top: 20vh;
+  background: none;
+  border: none;
+  font-size: 3vw;
+  cursor: pointer;
+}
+button:active {
+  font-size: 2.8vw;
+}
+#card {
+  position: absolute;
+  left: 17vw;
+  top: 29.5vh;
+  width: 82vw;
+  display: grid;
+  grid-template-columns: 30vw 50vw;
+  grid-template-rows: 1fr;
+  align-items: center;
+  grid-template-areas: "bild info";
+  margin-bottom: 20px;
+}
+#card1 {
+  position: absolute;
+  top: 31vh;
+  left: 1vw;
+  width: 98vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  grid-template-areas: "bild info";
+}
+.powerstats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 14vw;
+  flex-wrap: wrap;
+  margin: auto;
+}
+#powerstats1 {
+  position: absolute;
+  top: -2vh;
+  left: 30vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10vw;
+  flex-wrap: wrap;
+  margin: auto;
+}
+#powerstats1 img {
+  margin: auto;
+}
+#powerstats1 .combat,
+.durability,
+.intelligence,
+.power,
+.speed,
+.strength {
+  margin-top: 6px;
+}
+#powerstats2 {
+  position: absolute;
+  top: -2vh;
+  left: 58vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10vw;
+  flex-wrap: wrap;
+  margin: auto;
+}
+#combatButton {
+  position: absolute;
+  top: 50vh;
+  display: flex;
+  align-items: center;
+}
+#combatButton:after {
+  content: "Fight";
+  font-size: 1.4vw;
+  font-weight: bold;
+  text-align: center;
+}
+span {
+  position: absolute;
+  top: 15vw;
+  left: 42.5vw;
+  display: none;
+}
+span img {
+  width: 15vw;
+  height: 30vh;
+}
+#erg {
+  position: absolute;
+  top: 73vh;
+  left: 37vw;
+  width: 25vw;
+  color: #262f35;
+  text-transform: capitalize;
+  background-color: rgba(255, 255, 255, 0.493);
+  border-radius: 40px;
+  text-shadow: 0px 0px 4px #ffffff, 0px 0px 4px #ffffff;
+  font-size: 2.4vw;
+  text-align: center;
+}
+#powerstats2 img {
+  margin: auto;
+}
+#powerstats2 .combat,
+.durability,
+.intelligence,
+.power,
+.speed,
+.strength {
+  margin-top: 6px;
+}
+#bild {
+  grid-area: bild;
+  border-radius: 50px 0 0 50px;
+  position: relative;
+  margin: 0;
+  background-size: 100%;
+  background-repeat: no-repeat no-repeat;
+  width: 30vw;
+  height: 68vh;
+}
+#bildComp {
+  grid-area: info;
+  border-radius: 0 50px 50px 0;
+  position: relative;
+  float: right;
+  margin: 0;
+  background-size: 100%;
+  background-repeat: no-repeat no-repeat;
+  width: 30vw;
+  height: 68vh;
+}
+#info {
+  grid-area: info;
+}
+.combat,
+.durability,
+.intelligence,
+.power,
+.speed,
+.strength {
+  width: 4vw;
+  height: 6vh;
+  font-size: 2.4vw;
+  line-height: -20%;
+  border: 1px solid white;
+  border-left: none;
+  border-radius: 10px;
+  text-align: center;
+  padding: 0;
+  color: #262f35de;
+  background-color: #7775857c;
+  text-shadow: 3px 3px 3px #e0b3a9c9;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.combat:hover {
+  background-color: white;
+}
+.durability:hover {
+  background-color: white;
+}
+.intelligence:hover {
+  background-color: white;
+}
+.power:hover {
+  background-color: white;
+}
+.speed:hover {
+  background-color: white;
+}
+.strength:hover {
+  background-color: white;
+}
+img {
+  width: 3vw;
+  height: 6vh;
+  margin-top: 40px;
+  margin-left: 4px;
+}
