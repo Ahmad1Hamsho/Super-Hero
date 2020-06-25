@@ -1,9 +1,14 @@
-import { key } from "./key.js";
+/* import { key } from "./key.js"; */
+
 const container = document.querySelector("#container");
 const more = document.createElement("section");
 const searchButton = document.querySelector("#searchButton");
 searchButton.addEventListener("click", (e) => {
   more.innerHTML = " ";
+  const keyInput = document.getElementById("keyInput").value;
+  localStorage.setItem("apiKey", keyInput);
+  console.log(localStorage.getItem("apiKey"));
+  const key = localStorage.getItem("apiKey");
   document.querySelector("span").style.display = "none";
   container.innerHTML = " ";
   const card = document.createElement("section");
@@ -39,11 +44,10 @@ searchButton.addEventListener("click", (e) => {
   speed1.classList.add("speed");
   const strength1 = document.createElement("div");
   strength1.classList.add("strength");
-  const q = document.querySelector("input").value;
+  const q = document.querySelector("#searchInput").value;
   fetch(`https://superheroapi.com/api/${key}/search/${q}`)
     .then((response) => response.json())
     .then((superheros) => {
-      console.log(superheros);
       superheros.results.forEach((superhero) => {
         card.appendChild(bildSection);
         bildSection.innerHTML = `<div style="background-image: url(${superhero.image.url});" id="bild"></div>`;
@@ -94,6 +98,7 @@ searchButton.addEventListener("click", (e) => {
           more.id = "more";
           more.innerHTML = `<div id="biography"><h5>Biography</h5><h6>Full Name : ${superhero.biography["full-name"]}</h6><h6>Alter egos : ${superhero.biography["alter-egos"]}</h6><h6>Aliases : ${superhero.biography.aliases}</h6><h6>Place of birth : ${superhero.biography["place-of-birth"]}</h6><h6>First Appearance : ${superhero.biography["first-appearance"]}</h6><h6>Publisher : ${superhero.biography.publisher}</h6><h6>Alignment : ${superhero.biography.alignment}</h6></div> <div id="appearance"><h5>Appearance</h5><h6> Gender :${superhero.appearance.gender}</h6><h6>Race : ${superhero.appearance.race}</h6><h6>Eye Color :${superhero.appearance["eye-color"]}</h6><h6>Hair Color :${superhero.appearance["hair-color"]}</h6></div> <div id="work"><h5>Work</h5><h6>Occupation :${superhero.work.occupation}</h6><h6>Base :${superhero.work.base}</h6></div><div id="connections"><h5>Connections</h5><h6>Group Affiliation :${superhero.connections["group-affiliation"]}</h6><h6>Relatives: ${superhero.connections.relatives}</h6></div>`;
         });
+
         combatButton.addEventListener("click", (e) => {
           more.innerHTML = " ";
 
@@ -201,4 +206,9 @@ searchButton.addEventListener("click", (e) => {
         });
       });
     });
+  if (key == "") {
+    alert("Plase enter your Api key");
+  } else {
+    document.getElementById("apiKeyDiv").style.display = "none";
+  }
 });

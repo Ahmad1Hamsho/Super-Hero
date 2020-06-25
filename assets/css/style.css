@@ -4,6 +4,7 @@ body {
   background-repeat: repeat repeat;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 #logo {
   width: 40vw;
   height: 43vh;
@@ -39,7 +40,7 @@ h3,
 h4 {
   text-shadow: 2px 2px 2px #daa378;
 }
-a {
+#superHeroLink {
   position: absolute;
   left: 57vw;
   top: 16vh;
@@ -51,7 +52,7 @@ a {
   cursor: pointer;
 }
 
-a:after {
+#superHeroLink:after {
   content: "View all Heroes";
   align-self: center;
   line-height: 8vw;
@@ -90,7 +91,7 @@ h5 {
 h6 {
   font-size: 1vw;
 }
-input {
+#searchInput {
   position: absolute;
   left: 36vw;
   top: 22vh;
@@ -200,6 +201,33 @@ button:active {
   font-weight: bold;
   text-align: center;
 }
+#apiKeyDiv {
+  position: absolute;
+  left: 1vw;
+  display: flex;
+  align-items: center;
+}
+#apiKeyLink img {
+  margin: 0;
+}
+#keyInput {
+  background: none;
+  border-radius: 20px;
+  border: 1px dashed black;
+  width: 14vw;
+  height: 4vh;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.794);
+  text-shadow: 2px 2px 2px #daa378;
+  font-weight: bolder;
+  font-size: 1.5vw;
+}
+#keyInput::placeholder {
+  color: inherit;
+  font-size: 1vw;
+  text-align: center;
+}
+
 span {
   position: absolute;
   top: 15vw;

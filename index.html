@@ -6,14 +6,30 @@
     <title>Super Heros</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-
   <body>
-    <a href="https://superheroapi.com/ids.html" target="_blank"
+    <div id="apiKeyDiv">
+      <input
+        type="text"
+        placeholder="Please enter your Api key."
+        id="keyInput"
+      />
+      <a
+        href="https://superheroapi.com/index.html"
+        target="_blank"
+        id="apiKeyLink"
+        ><img src="https://img.icons8.com/bubbles/50/000000/question-mark.png"
+      /></a>
+    </div>
+    <a
+      href="https://superheroapi.com/ids.html"
+      target="_blank"
+      id="superHeroLink"
       ><img src="https://img.icons8.com/dusk/64/000000/view-file.png"
     /></a>
     <img src="./assets/img/SuperheroLogo.png" id="logo" alt="logo" />
-    <input type="search" name="" id="" id="searchInput" />
+    <input type="search" name="" id="searchInput" />
     <button id="searchButton">🗡️</button>
+
     <section id="container"></section>
     <span><img src="./assets/img/SwordCrossedAnimV2.gif" alt="" /></span>
     <script type="module" src="./assets/js/main.js"></script>
